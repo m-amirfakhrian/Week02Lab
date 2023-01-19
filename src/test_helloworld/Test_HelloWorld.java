@@ -23,11 +23,18 @@ public class Test_HelloWorld {
         System.out.println("Enter a positive integer number");
         int n = myObj.nextInt(); 
         if(n>0){
-        double sum=0.0;
-        for(int i = 1; i<= n; i++){
-           sum+= 1.0/i;    
+        double sumD=0.0;
+        double sumR=0.0;
+        for(int i = 1 ; i<= n ; i++){
+           sumD+= 1.0/i;    
         }
-        System.out.printf("Sum 1/i for i=1 to %d is %f \n",n,sum);
+        // Reverse Computation
+        for(int i = n ; i >= 1 ; i--){
+           sumR+= 1.0/i;    
+        }
+        
+        System.out.printf("Direct Sum 1/i for i=1 to %d is %f \n",n,sumD);
+        System.out.printf("Reverse Sum 1/i for i=1 to %d is %f \n",n,sumR);
     }
         else System.out.println("The number is incorrect!");
     }
